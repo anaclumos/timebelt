@@ -10,11 +10,12 @@ const GlobalStyle = createGlobalStyle`
     color: #e3e4e5;
     box-sizing: border-box;
     margin: 0 auto;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont,
-      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+          Pretendard, system-ui, -system-ui, sans-serif, 'Apple Color Emoji';
+    width: 50rem;
   }
   p, a {
-    font-size: 20px;
+    font-size: 1.6rem;
   }
 `
 
