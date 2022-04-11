@@ -12,20 +12,6 @@ const Home: NextPage = () => {
     'America/Los_Angeles'
   )
   const [now, setNow] = useState(losangeles)
-
-  // negated(): Temporal.Duration;
-  // abs(): Temporal.Duration;
-  // with(durationLike: DurationLike): Temporal.Duration;
-  // add(other: Temporal.Duration | DurationLike | string, options?: DurationArithmeticOptions): Temporal.Duration;
-  // subtract(other: Temporal.Duration | DurationLike | string, options?: DurationArithmeticOptions): Temporal.Duration;
-  // round(roundTo: DurationRoundTo): Temporal.Duration;
-  // total(totalOf: DurationTotalOf): number;
-  // toLocaleString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string;
-  // toJSON(): string;
-  // toString(options?: ToStringPrecisionOptions): string;
-  // valueOf(): never;
-  // readonly [Symbol.toStringTag]: 'Temporal.Duration';
-
   return (
     <div>
       <Head>
