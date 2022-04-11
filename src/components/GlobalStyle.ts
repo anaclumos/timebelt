@@ -17,6 +17,25 @@ const GlobalStyle = createGlobalStyle`
   p, a {
     font-size: 1.6rem;
   }
+  h2 {
+    line-height: 1.5;
+  }
+  button {
+    font-size: 1.6rem;
+    /* make background transparent */
+    background-color: transparent;
+    height: 3.2rem;
+    border: 2px solid #e3e4e5;
+    border-radius: 0.8rem;
+    padding: 0 1.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: #e3e4e5;
+      color: #17171e;
+    }
+    margin: 1rem auto;
+  }
 `
 
 export default GlobalStyle
