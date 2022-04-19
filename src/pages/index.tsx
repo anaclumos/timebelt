@@ -6,12 +6,14 @@ import {
 } from '@js-temporal/polyfill'
 import Head from 'next/head'
 import { useState } from 'react'
+import TimeNavigatorButtonRow from '../components/TimeNavigatorButtonRow'
+import TimeTable from '../components/TimeTable'
 
 const Home: NextPage = () => {
-  const losangeles = Temporal.Now.zonedDateTimeISO(
-    'America/Los_Angeles'
+  const [now, setNow] = useState(
+    Temporal.Now.zonedDateTimeISO('America/Los_Angeles')
   )
-  const [now, setNow] = useState(losangeles)
+
   return (
     <div>
       <Head>
@@ -21,43 +23,44 @@ const Home: NextPage = () => {
           content="timezone conversion made easy"
         />
       </Head>
-
       <main>
         <h1>Timebelt: Timezone conversion made easy</h1>
-        <h2>Los Angeles &rarr; {now.toLocaleString()}</h2>
-        <h2>
-          New York &rarr;{' '}
-          {now
-            .withTimeZone('America/New_York')
-            .toLocaleString('en-US', {
-              timeZone: 'America/New_York',
-            })}
-        </h2>
-        <h2>
-          Seoul is &rarr;{' '}
-          {now
-            .withTimeZone('Asia/Seoul')
-            .toLocaleString('ko-KR', {
-              timeZone: 'Asia/Seoul',
-            })}
-        </h2>
         <p>
-          {/* add some text */}
-          <button
-            onClick={() => {
-              setNow(now.add({ hours: 1 }))
-            }}
-          >
-            Add 1 hour
-          </button>
-          <button
-            onClick={() => {
-              setNow(now.subtract({ hours: 1 }))
-            }}
-          >
-            Subtract 1 hour
-          </button>
+          This is a technical proof of concept using
+          TypeScript Next.js with Polyfilled Temporal API.
         </p>
+        <TimeTable now={now} />
+        <button
+          onClick={() => {
+            setNow(
+              Temporal.Now.zonedDateTimeISO(
+                'America/Los_Angeles'
+              )
+            )
+          }}
+        >
+          Now
+        </button>
+        <TimeNavigatorButtonRow
+          now={now}
+          setNow={setNow}
+          timeframe={'days'}
+        />
+        <TimeNavigatorButtonRow
+          now={now}
+          setNow={setNow}
+          timeframe={'hours'}
+        />
+        <TimeNavigatorButtonRow
+          now={now}
+          setNow={setNow}
+          timeframe={'minutes'}
+        />
+        <TimeNavigatorButtonRow
+          now={now}
+          setNow={setNow}
+          timeframe={'seconds'}
+        />
       </main>
     </div>
   )

@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
   }
   p, a {
     font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 0 0 1.6rem;
   }
   h2 {
     line-height: 1.5;
@@ -29,12 +31,21 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 0.8rem;
     padding: 0 1.6rem;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
     &:hover {
       background-color: #e3e4e5;
       color: #17171e;
     }
     margin: 1rem auto;
+  }
+  table {
+    padding: 1rem;
+    border: 1px solid #e3e4e5;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 0.5rem;
+    border: 1px solid #e3e4e5;
+    margin: 0;
   }
 `
 
