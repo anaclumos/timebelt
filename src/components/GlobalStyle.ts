@@ -6,13 +6,13 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: #17171e !important;
     margin: 1rem auto;
+    max-width: 50rem;
   }
   * {
     color: #e3e4e5;
     box-sizing: border-box;
     font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
           Pretendard, system-ui, -system-ui, sans-serif, 'Apple Color Emoji';
-    max-width: 50rem;
     word-break: keep-all;
     word-wrap: break-word;
   }
