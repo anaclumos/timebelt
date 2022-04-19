@@ -26,10 +26,20 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <h1>Timebelt: Timezone conversion made easy</h1>
-        <p>
-          This is a technical proof of concept using
-          TypeScript Next.js with Polyfilled Temporal API.
-        </p>
+        <div>
+          <p>
+            This is a technical proof of concept using
+            TypeScript Next.js with Polyfilled{' '}
+            <a href="https://tc39.es/proposal-temporal/docs/">
+              Temporal API
+            </a>
+            . Open-sourced on{' '}
+            <a href="https://github.com/anaclumos/timebelt">
+              GitHub
+            </a>
+            .
+          </p>
+        </div>
         <RealTimeCheckbox now={now} setNow={setNow} />
         <TimeTable now={now} />
         <button

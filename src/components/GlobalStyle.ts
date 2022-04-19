@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
           Pretendard, system-ui, -system-ui, sans-serif, 'Apple Color Emoji';
     width: 50rem;
   }
-  p, a {
+  p, a{
     font-size: 1.6rem;
     line-height: 2.4rem;
     margin: 0 0 1.6rem;
