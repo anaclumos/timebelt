@@ -8,6 +8,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import TimeNavigatorButtonRow from '../components/TimeNavigatorButtonRow'
 import TimeTable from '../components/TimeTable'
+import RealTimeCheckbox from '../components/RealTimeCheckbox'
 
 const Home: NextPage = () => {
   const [now, setNow] = useState(
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
           This is a technical proof of concept using
           TypeScript Next.js with Polyfilled Temporal API.
         </p>
+        <RealTimeCheckbox now={now} setNow={setNow} />
         <TimeTable now={now} />
         <button
           onClick={() => {

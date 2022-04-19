@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 1rem auto;
   }
   table {
+    font-size: 1.2rem;
     padding: 1rem;
     border: 1px solid #e3e4e5;
     border-collapse: collapse;
