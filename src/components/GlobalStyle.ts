@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
   body{
     background-color: #17171e !important;
-    margin: 1rem;
+    margin: 1rem auto;
   }
   * {
     color: #e3e4e5;
