@@ -5,14 +5,16 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
   body{
     background-color: #17171e !important;
+    margin: 1rem;
   }
   * {
     color: #e3e4e5;
     box-sizing: border-box;
-    margin: 0 auto;
     font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
           Pretendard, system-ui, -system-ui, sans-serif, 'Apple Color Emoji';
-    width: 50rem;
+    max-width: 50rem;
+    word-break: keep-all;
+    word-wrap: break-word;
   }
   p, a{
     font-size: 1.6rem;
@@ -23,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
   }
   button {
+    width: 100%;
     font-size: 1.6rem;
     /* make background transparent */
     background-color: transparent;
@@ -47,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0.5rem;
     border: 1px solid #e3e4e5;
     margin: 0;
+    line-height: 1.5;
   }
 `
 
